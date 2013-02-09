@@ -1,11 +1,11 @@
 // Sample Config
 var config = {
-    "api_key": "AIzaSyCgLuPh5k9eKka2uHJXxov4OCCRaMTQUa8",
-    "table_id": "5313521",
-    "default_lat": "41.85",
-    "default_lng": "-87.675",
-    "city":"Chicago",
-    "state":"IL",
+    "api_key": "AIzaSyAyQkSthEhN5P_MDb4QYZ65tj9Yn27wJIQ",
+    "table_id": "1uw6_pMFF6YvY16qQzmgP8gkW12PvGA4ONL4T4Oc",
+    "default_lat": "37.8044",
+    "default_lng": "-122.2697",
+    "city":"Oakland",
+    "state":"CA",
     "initial_zoom": 11,
     "map_style": "grey",
     "stroke_color": "#0954cf",
@@ -15,3 +15,4 @@ var config = {
     "cal_summary":"CDPH Free Flu Shot Event",
     "transit_name":"CTA"
 }
+
