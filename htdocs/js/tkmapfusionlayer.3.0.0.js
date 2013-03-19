@@ -1,4 +1,3 @@
-
 function TkMapFusionLayer(Args)
 {
 	/* PROPERTIES **************************************************************/

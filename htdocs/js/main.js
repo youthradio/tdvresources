@@ -188,7 +188,7 @@ function initialize() {
 		// Set CSS styles for the DIV containing the control
 		// Setting padding to 5 px will offset the control
 		// from the edge of the map.
-		controlDiv.style.padding = '1em';
+		controlDiv.style.padding = '5px';
 		// Set CSS for the control border.
 		var controlUI = document.createElement('div');
 		controlUI.style.backgroundColor = 'white';
@@ -202,12 +202,9 @@ function initialize() {
 		var controlText = document.createElement('div');
 		controlText.style.fontFamily = 'sans-serif';
 		controlText.style.fontSize = '12px';
-		controlText.style.paddingLeft = '.5em';
-		controlText.style.paddingRight = '.5em';
-		controlText.style.paddingTop = '.3em';
-		controlText.style.paddingBottom = '.3em';
-
-		controlText.innerHTML = 'Maximize';
+		controlText.style.paddingLeft = '4px';
+		controlText.style.paddingRight = '4px';
+		controlText.innerHTML = 'Enable Pan/Zoom';
 		controlUI.appendChild(controlText);
 		// Setup the click event listeners.
 		google.maps.event.addDomListener(controlUI, 'click', function() {
@@ -215,39 +212,13 @@ function initialize() {
 			{
 				Map.setPanZoom(true);
 				Map.setTouchScroll(false);
-				var cntr = Map.Map.getCenter();
-				$('#span-info,#footer').hide(750,function(){
-					$('#span-map').addClass('span12');
-					$('#span-map').removeClass('span7');
-					$('#map-width').css('height','100%');
-					$('#map-ratio').css('margin-top', window.innerHeight);
-					$('#span-map').offset().top;
-					controlText.innerHTML = 'Minimize';
-					Map.Map.setCenter(cntr);
-					google.maps.event.trigger(Map.Map, 'resize');
-				});
+				controlText.innerHTML = 'Disable Pan/Zoom';
 			}
 			else
 			{
 				Map.setPanZoom(false);
 				Map.setTouchScroll(true);
-				var cntr = Map.Map.getCenter();
-				$('#span-info,#footer').show(750,function(){
-					$('#span-map').addClass('span7');
-					$('#span-map').removeClass('span12');
-					$('#map-width').css('height','');
-					if(window.innerWidth < 768)
-					{
-						$('#map-ratio').css('margin-top','80%');
-					}
-					else
-					{
-						$('#map-ratio').css('margin-top','100%');
-					}
-					controlText.innerHTML = 'Maximize';
-					Map.Map.setCenter(cntr);
-					google.maps.event.trigger(Map.Map, 'resize');
-				});
+				controlText.innerHTML = 'Enable Pan/Zoom';
 			}
 		});
 	}
