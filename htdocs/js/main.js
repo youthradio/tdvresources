@@ -33,9 +33,9 @@ function initialize() {
 
 	// Get today's date
 	var d = new Date(),
-		date = d.getDate(),
-		month = d.getMonth() + 1, // zero-based
-		year = d.getFullYear();
+	date = d.getDate(),
+    month = d.getMonth() + 1, // zero-based
+	year = d.getFullYear();
 
 	// Get seven days from today
 	var d7 = new Date(d);
@@ -47,7 +47,7 @@ function initialize() {
 	var year7 = d7.getFullYear();
 
 	// Google FT likes dot-based dates
-	// var defaultWhere = "Date >= '"+year +'.'+ (month<=9?'0'+month:month) +'.'+ (date<=9?'0'+date:date)+"'";
+	//var defaultWhere = "Date >= '"+year +'.'+ (month<=9?'0'+month:month) +'.'+ (date<=9?'0'+date:date)+"'";
 	var defaultWhere = "True";		
 	
 	// Render the Flu shot clinic locations on the map
@@ -374,7 +374,7 @@ function initialize() {
 		Map.Map.fitBounds(Circle.getBounds());
 		FluShotsLayer.showLayer({where:defaultWhere});
 		fluShotLayerListener();
-		$('#grp-find').show(750);
+		//$('#grp-find').show(750);
 		$('#grp-reset').show();
 		if(eventSelected === true)
 		{
