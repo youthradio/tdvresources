@@ -47,7 +47,8 @@ function initialize() {
 	var year7 = d7.getFullYear();
 
 	// Google FT likes dot-based dates
-	var defaultWhere = "Date >= '"+year +'.'+ (month<=9?'0'+month:month) +'.'+ (date<=9?'0'+date:date)+"'";
+	// var defaultWhere = "Date >= '"+year +'.'+ (month<=9?'0'+month:month) +'.'+ (date<=9?'0'+date:date)+"'";
+	var defaultWhere = "True";		
 	
 	// Render the Flu shot clinic locations on the map
 	var FluShotsLayer = new TkMapFusionLayer({
